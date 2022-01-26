@@ -95,15 +95,15 @@ def backtracking(board):
         return True
     else:
         current_empty_position = empty_position
-    # print("current_empty_position is:{}".format(current_empty_position))
+        print("current_empty_position is:{}".format(current_empty_position))
 
     for i in range(1, 10):
         if is_assigned_value_correct(board, empty_position, i):
             board["".join(empty_position)] = i
 
             if backtracking(board):
-                solved_board = board
-                return solved_board
+                board_solved = board
+                return board_solved
 
             board["".join(empty_position)] = 0
     return False
@@ -160,7 +160,7 @@ if __name__ == '__main__':
                      for r in range(9) for c in range(9)}
 
             # Print starting board. TODO: Comment this out when timing runs.
-            # print_board(board)
+            print_board(board)
 
             # Solve with backtracking
             start_time = time.time()
@@ -174,7 +174,7 @@ if __name__ == '__main__':
                 solved_board_numbers_file.write("Board No:{}".format(board_no))
                 solved_board_numbers_file.write('\n')
             # Print solved board. TODO: Comment this out when timing runs.
-            # print_board(solved_board)
+            print_board(solved_board)
 
             # Write board to file
             outfile.write(board_to_string(solved_board))
