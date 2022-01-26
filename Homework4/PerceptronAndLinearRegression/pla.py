@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import sys
+import plot_db
 
 
 def main():
@@ -27,7 +28,7 @@ def main():
         if previous_weights[0] == weights[0] and previous_weights[1] == weights[1] and previous_weights[2] == weights[
             2]:
             break
-    #plot_db.visualize_scatter(training_data, 'feature1', 'feature2', 'label', weights=weights, title="Perceptron Decision Boundary (UNI: spa2138)")
+    plot_db.visualize_scatter(training_data, 'feature1', 'feature2', 'label', weights=weights, title="Perceptron Decision Boundary (UNI: spa2138)")
 
 if __name__ == "__main__":
     """DO NOT MODIFY"""

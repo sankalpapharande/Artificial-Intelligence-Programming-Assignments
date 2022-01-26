@@ -137,11 +137,7 @@ class PuzzleState(object):
 
 
 # Function that Writes to output.txt
-
-### Students need to change the method to have the corresponding parameters
-# def writeOutput(nodes_explored_till_now):
 def writeOutput(state):
-    ### Student Code Goes here
     global max_search_depth
     global nodes_expanded
     path_to_goal = []
